@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="910,5198" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="910,5003" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
       <x:String>System.Activities</x:String>
@@ -42,7 +42,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="56">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -71,9 +71,16 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Due to data change in challenge.xlxs, the test result will show 12% success rate and 9 fields are correct out of 70 fields. &#xD;&#xA;But the result is 100% success. &#xD;&#xA;" DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="920,5133" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&#xA;" DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="920,4938" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtChallengeTable" />
     </Sequence.Variables>
@@ -134,25 +141,25 @@
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtChallengeTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="878,4394" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtChallengeTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="878,4214" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="844,4279" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="844,4099" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Rpa'" sap:VirtualizedContainerService.HintSize="802,4187" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="16ba57850c898a731b49558eda376380" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" TimeoutMS="3000">
+            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Rpa'" sap:VirtualizedContainerService.HintSize="802,4007" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="16ba57850c898a731b49558eda376380" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" TimeoutMS="3000">
               <ui:BrowserScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence sap2010:Annotation.AnnotationText="Read datatable and strore row items in variable" DisplayName="Do" sap:VirtualizedContainerService.HintSize="768,4010" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence sap2010:Annotation.AnnotationText="Read datatable and strore row items in variable" DisplayName="Do" sap:VirtualizedContainerService.HintSize="768,3830" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="strFirstName" />
                       <Variable x:TypeArguments="x:String" Name="strLastName" />
@@ -203,7 +210,7 @@
                         <OutArgument x:TypeArguments="x:String">[strPhoneNumber]</OutArgument>
                       </ui:GetRowItem.Value>
                     </ui:GetRowItem>
-                    <ui:AnchorBase AnchorPosition="Auto" sap2010:Annotation.AnnotationText="Anchor Base is use to find element (field name and it's label even it is missplaced in different places in the browser&#xD;&#xA;" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,268" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+                    <ui:AnchorBase AnchorPosition="Auto" sap2010:Annotation.AnnotationText="Anchor Base is use to find element (field name and it's label even it is missplaced in different places in the browser&#xA;" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,268" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
                       <ui:AnchorBase.Action>
                         <ActivityAction x:TypeArguments="ui:Anchor">
                           <ActivityAction.Argument>
@@ -475,7 +482,7 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:CommentOut sap2010:Annotation.AnnotationText="For debug purpose" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="726,262" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                    <ui:CommentOut sap2010:Annotation.AnnotationText="For debug purpose" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="726,82" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                       <ui:CommentOut.Body>
                         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="272,153" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <sap:WorkflowViewStateService.ViewState>
@@ -489,6 +496,8 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:CommentOut>
@@ -511,6 +520,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="878,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;The test result will show 12% success rate and 9 fields are correct Out Of 70 fields.&quot; +Environment.NewLine +&quot; But the result Is 100% success.&quot; +Environment.NewLine + &quot;I didnt download challenge.xlsx from rpachallenge.com. I created my own .xlsx with fake datas.&quot; +Environment.NewLine + &quot; Due to changes in challenge.xlxs field datas it is showing 12% success and 9 fields are correct out of 70 fields. .&quot; +Environment.NewLine + &quot; But the result is 100% success &quot;]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="878,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Completed with 100% success&quot;]" />
   </Sequence>
 </Activity>
